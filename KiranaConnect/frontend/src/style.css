@@ -1,0 +1,404 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  font:
+    15px "Inter",
+    system-ui,
+    sans-serif;
+  color: #20372c;
+  background: #f4f6f1;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+button {
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 8px 12px;
+  background: #edf3eb;
+  color: #23513b;
+  font-weight: 600;
+}
+button:hover {
+  filter: brightness(0.95);
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+button svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+button.primary,
+.floating {
+  background: #246741;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 15px;
+}
+.shell {
+  display: flex;
+  min-height: 100vh;
+}
+aside {
+  width: 225px;
+  background: #153d30;
+  color: #f4faf4;
+  position: fixed;
+  inset: 0 auto 0 0;
+  padding: 26px 15px;
+  z-index: 3;
+  overflow: auto;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 22px;
+  font-weight: 750;
+  letter-spacing: -1px;
+}
+.brand svg {
+  color: #b2dc93;
+}
+aside small {
+  display: block;
+  color: #a7c5b4;
+  margin: 30px 10px 12px;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+aside button {
+  background: none;
+  color: #d4e5db;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  width: 100%;
+  margin: 3px 0;
+  font-size: 14px;
+  padding: 10px;
+}
+aside .selected {
+  background: #d9efbc;
+  color: #193f28;
+}
+nav {
+  margin-bottom: 30px;
+}
+.shell > main {
+  margin-left: 225px;
+  width: calc(100% - 225px);
+}
+.top,
+header,
+.heading,
+.notice {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.top {
+  height: 62px;
+  padding: 0 4%;
+  background: #fff;
+  border-bottom: 1px solid #dfe6db;
+  font-size: 13px;
+}
+.top span:first-of-type {
+  margin-right: auto;
+}
+.avatar {
+  background: #d9eacb;
+  border-radius: 50%;
+  padding: 7px 12px;
+  font-weight: bold;
+}
+.workspace {
+  max-width: 1500px;
+  margin: auto;
+  padding: 30px 4% 100px;
+}
+.heading {
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+.heading small,
+section small {
+  color: #65746a;
+}
+h1 {
+  font-size: clamp(25px, 3vw, 40px);
+  font-weight: 670;
+  letter-spacing: -1.8px;
+}
+h2 {
+  font-size: 18px;
+  font-weight: 650;
+  letter-spacing: -0.45px;
+  margin-bottom: 13px;
+}
+h3 {
+  font-weight: 650;
+  margin-top: 20px;
+}
+section,
+.dialog,
+.chat {
+  background: white;
+  border: 1px solid #dce4d9;
+  border-radius: 14px;
+  padding: 19px;
+  margin-bottom: 16px;
+  min-width: 0;
+}
+.cards,
+.grid2 {
+  display: grid;
+  gap: 14px;
+}
+.cards {
+  grid-template-columns: repeat(4, 1fr);
+}
+.cards section {
+  display: grid;
+  gap: 6px;
+}
+.cards svg {
+  color: #397a49;
+}
+.cards strong {
+  font-size: clamp(20px, 2.4vw, 33px);
+  letter-spacing: -1px;
+}
+.grid2 {
+  grid-template-columns: 1.3fr 1fr;
+}
+.scroll {
+  overflow: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+th,
+td {
+  text-align: left;
+  padding: 11px 8px;
+  border-bottom: 1px solid #edf0e9;
+}
+th {
+  font-weight: 600;
+  color: #627367;
+  background: #f7f9f5;
+}
+td {
+  overflow-wrap: anywhere;
+}
+.badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 20px;
+  background: #e4f3e4;
+  color: #2b633b;
+  white-space: nowrap;
+}
+.amber {
+  background: #fff2d1;
+  color: #79541a;
+}
+.empty,
+section > p {
+  padding: 10px 0;
+  color: #65746a;
+  font-size: 14px;
+}
+.notice {
+  background: #e4eedb;
+  padding: 11px 14px;
+  border-radius: 8px;
+  margin: 12px 0;
+  white-space: pre-wrap;
+}
+.notice button,
+header > button:last-child {
+  margin-left: auto;
+}
+.floating {
+  position: fixed;
+  bottom: 20px;
+  right: 22px;
+  border-radius: 25px;
+  box-shadow: 0 4px 18px #26493333;
+  z-index: 4;
+}
+.chat {
+  position: fixed;
+  right: 20px;
+  bottom: 62px;
+  width: min(400px, 94vw);
+  z-index: 5;
+  box-shadow: 0 10px 44px #1f3b292a;
+}
+.messages {
+  max-height: 48vh;
+  overflow: auto;
+  padding: 12px 0;
+}
+.messages > button {
+  margin: 3px;
+  font-size: 13px;
+}
+.bubble {
+  white-space: pre-wrap;
+  background: #f1f6ee;
+  border-radius: 9px;
+  padding: 9px;
+  margin: 8px 12px 8px 0;
+}
+.mine {
+  background: #dcecd7;
+  margin-left: 16px;
+}
+.chat form {
+  display: flex;
+}
+.chat input {
+  min-width: 0;
+  flex: 1;
+}
+.overlay,
+.login {
+  display: grid;
+  place-items: center;
+}
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: #152b2170;
+  z-index: 8;
+}
+.dialog {
+  width: min(520px, 94vw);
+  max-height: 92vh;
+  overflow: auto;
+}
+.dialog img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: contain;
+}
+.login {
+  min-height: 100vh;
+  background: #e9f1e3;
+}
+.login > div {
+  background: #fff;
+  border-radius: 20px;
+  padding: 36px;
+  width: min(430px, 94vw);
+}
+.login svg {
+  color: #286544;
+}
+.login p {
+  margin: 10px 0;
+  color: #567460;
+}
+label {
+  display: grid;
+  gap: 5px;
+  font-size: 13px;
+  margin: 10px 0;
+}
+input,
+select,
+textarea {
+  padding: 9px 10px;
+  border: 1px solid #bccbbb;
+  border-radius: 7px;
+  background: white;
+  color: #24362c;
+}
+fieldset {
+  border: 1px solid #dce5db;
+  padding: 8px;
+  border-radius: 8px;
+  margin: 8px 0;
+}
+.dialog form > button {
+  margin: 4px;
+}
+a {
+  color: #22603d;
+  text-decoration: underline;
+}
+.mobile {
+  display: none;
+}
+@media (max-width: 850px) {
+  aside {
+    width: 196px;
+  }
+  .shell > main {
+    margin-left: 196px;
+    width: calc(100% - 196px);
+  }
+  .cards,
+  .grid2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 680px) {
+  aside {
+    display: none;
+    top: 62px;
+  }
+  .shown,
+  .mobile {
+    display: block;
+  }
+  .shell > main {
+    width: 100%;
+    margin: 0;
+  }
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+  .workspace {
+    padding: 20px 12px 85px;
+  }
+  .heading {
+    align-items: flex-start;
+  }
+  .heading button {
+    font-size: 12px;
+  }
+  .cards {
+    gap: 8px;
+  }
+  .cards section {
+    padding: 12px;
+  }
+  .top {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+  .chat {
+    right: 3vw;
+  }
+  .heading h1 {
+    line-height: 1.1;
+  }
+}

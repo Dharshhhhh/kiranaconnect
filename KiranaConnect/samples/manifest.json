@@ -1,0 +1,102 @@
+{
+  "6989fec74aec2ccc0f68d3d70430c9f18c7c3ef914968606cd39e6f0e20913cd": {
+    "kind": "order",
+    "ref": "ORD-204",
+    "party": "Meena",
+    "items": [
+      {
+        "product": "Rice",
+        "unit": "kg",
+        "qty": 5
+      }
+    ],
+    "confidence": 0.99,
+    "suspicious": false
+  },
+  "3b17f549dc2bdea2eca9bb9396f90517a3c78d2ae24db29c92a9dd08ed9de724": {
+    "kind": "invoice",
+    "ref": "INV-402",
+    "party": "Kaveri Wholesale",
+    "items": [
+      {
+        "product": "Rice",
+        "unit": "kg",
+        "qty": 20,
+        "price": 40
+      }
+    ],
+    "amount": 800,
+    "confidence": 0.99,
+    "suspicious": false
+  },
+  "d2b1b922202fa6f33b6911f017589d6f32a2afd871056f066ab33cb0afbe795c": {
+    "kind": "payment",
+    "ref": "UPI50611001",
+    "party": "Meena",
+    "amount": 250,
+    "confidence": 0.99,
+    "suspicious": false
+  },
+  "429515d885261b8582cc0235c04468f8b82badde8f26d7d38763489f60c5b420": {
+    "kind": "stock",
+    "ref": "COUNT-33",
+    "party": "Store count",
+    "items": [
+      {
+        "product": "Rice",
+        "unit": "kg",
+        "qty": 65
+      }
+    ],
+    "confidence": 0.99,
+    "suspicious": false
+  },
+  "e07286393189ba0f39d26dcbfd44c5ab00d74a116c528fc016c59379b87472e3": {
+    "kind": "credit",
+    "ref": "LED-29",
+    "party": "Meena",
+    "amount": 350,
+    "confidence": 0.99,
+    "suspicious": false
+  },
+  "4f420f12f91eb99eb4adcac3cdbe9db4fbfac096ca33bfa02efe2bbcea5d1d0f": {
+    "kind": "invoice",
+    "ref": "INV-404",
+    "party": "Kaveri Wholesale",
+    "items": [
+      {
+        "product": "Rice",
+        "unit": "kg",
+        "qty": 10,
+        "price": 40
+      }
+    ],
+    "amount": 900,
+    "suspicious": true,
+    "confidence": 0.99
+  },
+  "90d574f2b359ad9533a336dc4174b96ef6e0622e3e62631bd7d9c52347305dbc": {
+    "kind": "payment",
+    "ref": "UPI50611999",
+    "party": "Meena",
+    "amount": 700,
+    "confidence": 0.99,
+    "suspicious": false
+  },
+  "38d84c6c55aa07146e72a12f22698cf92d4d1302223be2e0ef762d6db4e8b97b": {
+    "kind": "payment",
+    "ref": "UPI50611001",
+    "party": "Meena",
+    "amount": 250,
+    "confidence": 0.99,
+    "suspicious": false
+  },
+  "8be7144d37f7325b594afdfd09f2dbe6b6964c852a0adb66bf98cf48d896fd1a": {
+    "kind": "payment",
+    "ref": "DEMO-REJECT-150",
+    "party": "Meena",
+    "amount": 150,
+    "confidence": 0.99,
+    "suspicious": false
+  }
+}
